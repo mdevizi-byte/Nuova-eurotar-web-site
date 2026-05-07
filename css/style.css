@@ -666,15 +666,18 @@ textarea {
 }
 
 .animate-fadeInUp {
-  animation: fadeInUp 0.6s ease-out;
+  opacity: 1;
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.6s ease-out;
+  opacity: 1;
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
 .animate-slideInRight {
-  animation: slideInRight 0.6s ease-out;
+  opacity: 1;
+  animation: slideInRight 0.6s ease-out forwards;
 }
 /* ========================================
    UTILITY CLASSES

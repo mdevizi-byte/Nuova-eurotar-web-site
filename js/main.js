@@ -16,22 +16,22 @@ window.addEventListener('scroll', () => {
 
 // ========== MOBILE MENU TOGGLE ==========
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const nav = document.querySelector('nav');
+const mobileNav = document.querySelector('.navbar > nav');
 
-if (mobileMenuBtn) {
+if (mobileMenuBtn && mobileNav) {
   mobileMenuBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
+    mobileNav.classList.toggle('active');
     // Rotate the menu icon
-    mobileMenuBtn.style.transform = nav.classList.contains('active')
+    mobileMenuBtn.style.transform = mobileNav.classList.contains('active')
       ? 'rotate(90deg)'
       : 'rotate(0deg)';
   });
 
   // Close menu when a link is clicked
-  const navLinks = nav.querySelectorAll('a');
+  const navLinks = mobileNav.querySelectorAll('a');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      nav.classList.remove('active');
+      mobileNav.classList.remove('active');
       mobileMenuBtn.style.transform = 'rotate(0deg)';
     });
   });
@@ -57,10 +57,7 @@ const animatableElements = document.querySelectorAll(
   '.card, .feature, .section, .btn'
 );
 animatableElements.forEach(el => {
-  if (!el.classList.contains('animate-fadeInUp')) {
-    el.style.opacity = '0';
-    observer.observe(el);
-  }
+  observer.observe(el);
 });
 
 // ========== SMOOTH SCROLL TO ANCHOR LINKS ==========
