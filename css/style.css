@@ -196,6 +196,20 @@ header.scrolled {
   min-width: 0;
 }
 
+.brand-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--transition-fast);
+}
+
+.brand-link:hover {
+  opacity: 0.8;
+}
+
 .brand-mark {
   width: 110px;
   height: auto;
