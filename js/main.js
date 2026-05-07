@@ -16,7 +16,7 @@ window.addEventListener('scroll', () => {
 
 // ========== MOBILE MENU TOGGLE ==========
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const mobileNav = document.querySelector('.navbar > nav');
+const mobileNav = document.querySelector('.site-nav');
 
 if (mobileMenuBtn && mobileNav) {
   mobileMenuBtn.addEventListener('click', () => {

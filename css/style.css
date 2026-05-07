@@ -164,8 +164,11 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--color-white);
+  background: rgba(255, 255, 255, 0.96);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   box-shadow: var(--shadow-md);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.9);
   z-index: 1000;
   transition: all var(--transition-base);
 }
@@ -179,12 +182,29 @@ header.scrolled {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-lg) 0;
-  gap: var(--spacing-lg);
+  padding: var(--spacing-md) 0;
+  gap: var(--spacing-xl);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  text-decoration: none;
+  color: inherit;
+  min-width: 0;
+}
+
+.brand-mark {
+  width: 110px;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .logo {
-  font-size: var(--font-size-2xl);
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--color-dark-blue);
   transition: transform var(--transition-fast);
@@ -200,13 +220,19 @@ header.scrolled {
   font-weight: 400;
 }
 
-.navbar > nav ul {
+.site-nav {
+  margin-left: auto;
+}
+
+.site-nav ul {
   display: flex;
   list-style: none;
   gap: var(--spacing-2xl);
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
-.navbar > nav a {
+.site-nav a {
   font-size: var(--font-size-base);
   color: var(--color-graphite);
   font-weight: 500;
@@ -214,7 +240,7 @@ header.scrolled {
   padding-bottom: var(--spacing-sm);
 }
 
-.navbar > nav a::after {
+.site-nav a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -225,7 +251,7 @@ header.scrolled {
   transition: width var(--transition-base);
 }
 
-.navbar > nav a:hover::after {
+.site-nav a:hover::after {
   width: 100%;
 }
 
@@ -802,30 +828,31 @@ ul li {
     flex-wrap: wrap;
   }
 
-  .navbar > nav {
+  .site-nav {
     display: none;
     width: 100%;
     order: 3;
     background: var(--color-white);
     border-top: 1px solid var(--color-gray-light);
     padding-top: var(--spacing-md);
+    margin-left: 0;
   }
 
-  .navbar > nav.active {
+  .site-nav.active {
     display: block;
   }
 
-  .navbar > nav ul {
+  .site-nav ul {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-sm);
   }
 
-  .navbar > nav li {
+  .site-nav li {
     width: 100%;
   }
 
-  .navbar > nav a {
+  .site-nav a {
     display: block;
     width: 100%;
     padding: var(--spacing-sm) 0;
@@ -921,6 +948,7 @@ ul li {
 
   .navbar {
     padding: var(--spacing-md) 0;
+    gap: var(--spacing-md);
   }
 
   h1 {
