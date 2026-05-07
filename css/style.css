@@ -180,6 +180,7 @@ header.scrolled {
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-lg) 0;
+  gap: var(--spacing-lg);
 }
 
 .logo {
@@ -199,13 +200,13 @@ header.scrolled {
   font-weight: 400;
 }
 
-nav ul {
+.navbar > nav ul {
   display: flex;
   list-style: none;
   gap: var(--spacing-2xl);
 }
 
-nav a {
+.navbar > nav a {
   font-size: var(--font-size-base);
   color: var(--color-graphite);
   font-weight: 500;
@@ -213,7 +214,7 @@ nav a {
   padding-bottom: var(--spacing-sm);
 }
 
-nav a::after {
+.navbar > nav a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -224,7 +225,7 @@ nav a::after {
   transition: width var(--transition-base);
 }
 
-nav a:hover::after {
+.navbar > nav a:hover::after {
   width: 100%;
 }
 
@@ -285,6 +286,89 @@ nav a:hover::after {
   display: flex;
   gap: var(--spacing-lg);
   margin-top: var(--spacing-2xl);
+}
+
+.hero-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.hero-visual {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.visual-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  padding: var(--spacing-lg);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.visual-card--light {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-light);
+  color: var(--color-graphite);
+}
+
+.hero-logo {
+  width: 100%;
+  max-width: 280px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+  object-fit: contain;
+}
+
+.hero-image,
+.page-image,
+.product-card__image {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.hero-image {
+  height: 180px;
+}
+
+.page-image {
+  height: 220px;
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-2xl);
+}
+
+.product-card {
+  overflow: hidden;
+}
+
+.product-card__image {
+  height: 180px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: rgba(0, 168, 204, 0.12);
+  color: var(--color-cyan);
 }
 
 /* ========================================
@@ -710,16 +794,44 @@ ul li {
     padding: 0 var(--spacing-lg);
   }
 
-  nav ul {
-    gap: var(--spacing-lg);
+  .navbar {
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 
-  nav a {
+  .navbar > nav {
+    display: none;
+    width: 100%;
+    order: 3;
+    background: var(--color-white);
+    border-top: 1px solid var(--color-gray-light);
+    padding-top: var(--spacing-md);
+  }
+
+  .navbar > nav.active {
+    display: block;
+  }
+
+  .navbar > nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .navbar > nav li {
+    width: 100%;
+  }
+
+  .navbar > nav a {
+    display: block;
+    width: 100%;
+    padding: var(--spacing-sm) 0;
     font-size: var(--font-size-sm);
   }
 
   .mobile-menu-btn {
     display: block;
+    margin-left: auto;
   }
 
   .hero {
@@ -740,6 +852,26 @@ ul li {
     gap: var(--spacing-md);
   }
 
+  .hero-split {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .hero-visual {
+    order: -1;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .hero-logo {
+    max-width: 220px;
+  }
+
+  .hero-image,
+  .page-image {
+    height: 180px;
+  }
+
   .btn {
     width: 100%;
     justify-content: center;
@@ -749,6 +881,14 @@ ul li {
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
+  }
+
+  .grid {
+    gap: var(--spacing-lg);
+  }
+
+  .card {
+    padding: var(--spacing-lg);
   }
 
   .section {
@@ -776,8 +916,8 @@ ul li {
     padding: 0 var(--spacing-md);
   }
 
-  nav ul {
-    gap: var(--spacing-md);
+  .navbar {
+    padding: var(--spacing-md) 0;
   }
 
   h1 {
@@ -786,5 +926,30 @@ ul li {
 
   h2 {
     font-size: var(--font-size-xl);
+  }
+
+  .hero {
+    padding: 110px 0 50px;
+  }
+
+  .hero-visual {
+    max-width: 100%;
+  }
+
+  .visual-card {
+    padding: var(--spacing-md);
+  }
+
+  .hero-image,
+  .page-image {
+    height: 160px;
+  }
+
+  .logo {
+    font-size: var(--font-size-xl);
+  }
+
+  .logo-sub {
+    font-size: var(--font-size-xs);
   }
 }
