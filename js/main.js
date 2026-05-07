@@ -16,25 +16,29 @@ window.addEventListener('scroll', () => {
 
 // ========== MOBILE MENU TOGGLE ==========
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const nav = document.querySelector('nav');
+const mobileNav = document.querySelector('.navbar > nav');
 
 if (mobileMenuBtn) {
   mobileMenuBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
+    if (!mobileNav) return;
+
+    mobileNav.classList.toggle('active');
     // Rotate the menu icon
-    mobileMenuBtn.style.transform = nav.classList.contains('active')
+    mobileMenuBtn.style.transform = mobileNav.classList.contains('active')
       ? 'rotate(90deg)'
       : 'rotate(0deg)';
   });
 
   // Close menu when a link is clicked
-  const navLinks = nav.querySelectorAll('a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('active');
-      mobileMenuBtn.style.transform = 'rotate(0deg)';
+  if (mobileNav) {
+    const navLinks = mobileNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        mobileMenuBtn.style.transform = 'rotate(0deg)';
+      });
     });
-  });
+  }
 }
 
 // ========== INTERSECTION OBSERVER FOR ANIMATIONS ==========
