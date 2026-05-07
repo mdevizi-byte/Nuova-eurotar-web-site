@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contattaci | Nuova Eurotar">
+  <title>Contattaci | Nuova Eurotar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div>
+          <div class="logo">NUOVA EUROTAR</div>
+          <div class="logo-sub">Circuiti Stampati Professionali</div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="prodotti.html">Prodotti</a></li>
+            <li><a href="servizi.html">Servizi</a></li>
+            <li><a href="dove-siamo.html">Dove Siamo</a></li>
+            <li><a href="contattaci.html">Contattaci</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu-btn">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Contattaci</h1>
+        <p class="hero-subtitle">
+          Il nostro team è pronto ad aiutarti
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT INFO & FORM ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2">
+        <!-- Contact Information -->
+        <div>
+          <h2>Informazioni di Contatto</h2>
+
+          <div class="mt-lg">
+            <h4 class="font-bold">Telefono</h4>
+            <p class="mt-md">
+              📞 <a href="tel:+390600000000" class="text-cyan font-bold">+39 06 0000 0000</a>
+            </p>
+          </div>
+
+          <div class="mt-lg">
+            <h4 class="font-bold">Email</h4>
+            <p class="mt-md">
+              📧 <a href="mailto:info@nuova-eurotar.it" class="text-cyan font-bold">info@nuova-eurotar.it</a>
+            </p>
+          </div>
+
+          <div class="mt-lg">
+            <h4 class="font-bold">Indirizzo</h4>
+            <p class="mt-md text-sm">
+              Via Roma, 123<br>
+              00100 Roma (RM)<br>
+              Italia
+            </p>
+          </div>
+
+          <div class="mt-lg">
+            <h4 class="font-bold">Orari di Apertura</h4>
+            <p class="mt-md text-sm">
+              Lunedì - Venerdì: 08:00 - 18:00<br>
+              Sabato: 09:00 - 13:00<br>
+              Domenica: Chiuso
+            </p>
+          </div>
+
+          <div class="mt-lg">
+            <h4 class="font-bold">Tempi di Risposta</h4>
+            <p class="mt-md text-sm">
+              Email: entro 24 ore<br>
+              Chat/Telefono: entro 1 ora<br>
+              Emergenze: contattaci direttamente
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="card">
+          <h3>Invia un Messaggio</h3>
+          <form class="mt-lg">
+            <!-- Name Field -->
+            <div class="form-group">
+              <label for="name">Nome Completo *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Phone Field -->
+            <div class="form-group">
+              <label for="phone">Telefono</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+
+            <!-- Company Field -->
+            <div class="form-group">
+              <label for="company">Azienda</label>
+              <input type="text" id="company" name="company">
+            </div>
+
+            <!-- Subject Field -->
+            <div class="form-group">
+              <label for="subject">Argomento *</label>
+              <select id="subject" name="subject" required>
+                <option value="">-- Seleziona un argomento --</option>
+                <option value="preventivo">Richiesta Preventivo</option>
+                <option value="progettazione">Progettazione</option>
+                <option value="produzione">Produzione</option>
+                <option value="supporto">Supporto Tecnico</option>
+                <option value="partnership">Partnership</option>
+                <option value="altro">Altro</option>
+              </select>
+            </div>
+
+            <!-- Message Field -->
+            <div class="form-group">
+              <label for="message">Messaggio *</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <!-- Privacy Consent -->
+            <div class="form-group">
+              <input type="checkbox" id="privacy" name="privacy" required>
+              <label for="privacy" style="display: inline; margin-left: var(--spacing-sm);">
+                Accetto la <a href="#" class="text-cyan">Privacy Policy</a> *
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              Invia Messaggio
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== QUICK ACCESS ========== -->
+  <section class="section section--light">
+    <div class="container">
+      <h2>Richieste Comuni</h2>
+
+      <div class="grid grid-4">
+        <div class="card card-light">
+          <h4>Richiesta Preventivo</h4>
+          <p class="text-sm text-muted">
+            Inviaci i dettagli del tuo progetto e riceverai un preventivo personalizzato 
+            entro 24 ore.
+          </p>
+          <a href="contattaci.html" class="text-cyan font-bold mt-lg" style="display: inline-block;">
+            Inizia →
+          </a>
+        </div>
+
+        <div class="card card-light">
+          <h4>Supporto Tecnico</h4>
+          <p class="text-sm text-muted">
+            Hai dubbi su progettazione o materiali? Il nostro team tecnico è a tua 
+            disposizione.
+          </p>
+          <a href="contattaci.html" class="text-cyan font-bold mt-lg" style="display: inline-block;">
+            Contatta →
+          </a>
+        </div>
+
+        <div class="card card-light">
+          <h4>Informazioni Prodotto</h4>
+          <p class="text-sm text-muted">
+            Vuoi conoscere di più sui nostri prodotti e servizi? 
+            Siamo felici di fornirti tutti i dettagli.
+          </p>
+          <a href="contattaci.html" class="text-cyan font-bold mt-lg" style="display: inline-block;">
+            Chiedi Info →
+          </a>
+        </div>
+
+        <div class="card card-light">
+          <h4>Visita Impianto</h4>
+          <p class="text-sm text-muted">
+            Interessato a visitare la nostra sede e conoscere il nostro processo 
+            produttivo?
+          </p>
+          <a href="contattaci.html" class="text-cyan font-bold mt-lg" style="display: inline-block;">
+            Richiedi Visita →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ SECTION ========== -->
+  <section class="section">
+    <div class="container">
+      <h2>Domande Frequenti</h2>
+
+      <div class="max-w-600">
+        <div class="card mt-lg">
+          <h4>Quali sono i tempi di consegna?</h4>
+          <p class="text-sm text-muted mt-md">
+            I tempi variano in base al tipo di circuito: prototipi 24/48h, 
+            piccole serie 3-5 giorni, medie serie 1-2 settimane. 
+            I tempi per circuiti speciali vengono definiti su preventivo.
+          </p>
+        </div>
+
+        <div class="card mt-lg">
+          <h4>Offrite consulenza progettuale?</h4>
+          <p class="text-sm text-muted mt-md">
+            Sì, completamente gratuita! I nostri tecnici forniscono design review, 
+            supporto materiali e consigli per ottimizzare fattibilità e costi.
+          </p>
+        </div>
+
+        <div class="card mt-lg">
+          <h4>Quali metodi di pagamento accettate?</h4>
+          <p class="text-sm text-muted mt-md">
+            Accettiamo bonifico bancario, assegno, carta di credito e pagamento 
+            contrassegno per ordini piccoli. Per grandi volumi è disponibile 
+            finanziamento personalizzato.
+          </p>
+        </div>
+
+        <div class="card mt-lg">
+          <h4>Provide test reports and certifications?</h4>
+          <p class="text-sm text-muted mt-md">
+            Sì, forniamo report di test dettagliati, certificati di conformità 
+            e documentazione di tracciabilità per ogni lotto prodotto.
+          </p>
+        </div>
+
+        <div class="card mt-lg">
+          <h4>Avete quantitativi minimi?</h4>
+          <p class="text-sm text-muted mt-md">
+            No, produciamo anche prototipi singoli. Per piccole e medie serie 
+            i prezzi sono competitivi e non ci sono minimali obbligatori.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-lg">
+        <p class="text-muted">Non trovi quello che cerchi?</p>
+        <a href="contattaci.html" class="btn btn-outline mt-md">Contattaci Direttamente</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Nuova Eurotar</h4>
+          <p>Circuiti stampati professionali dal 1986.</p>
+        </div>
+        <div>
+          <h4>Servizi</h4>
+          <p><a href="servizi.html" class="footer-link">Progettazione</a></p>
+          <p><a href="servizi.html" class="footer-link">Produzione</a></p>
+          <p><a href="servizi.html" class="footer-link">Qualità</a></p>
+        </div>
+        <div>
+          <h4>Contatti</h4>
+          <p><a href="contattaci.html" class="footer-link">Contattaci</a></p>
+          <p>Email: <a href="mailto:info@nuova-eurotar.it" class="footer-link">info@nuova-eurotar.it</a></p>
+        </div>
+        <div>
+          <h4>Azienda</h4>
+          <p><a href="dove-siamo.html" class="footer-link">Dove Siamo</a></p>
+          <p><a href="index.html#home" class="footer-link">Chi Siamo</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 Nuova Eurotar S.p.A. - P.IVA 01839691001. Tutti i diritti riservati.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
